@@ -1,0 +1,17 @@
+version: '2'
+exclude_patterns:
+  - 'docs'
+  - 'documentation'
+  - 'dist'
+  - '**/*.log'
+  - '**/*.ico'
+  - '**/*.test.js'
+plugins:
+  csslint:
+    enabled: true
+  editorconfig:
+    enabled: true
+    config:
+      editorconfig: .editorconfig
+  git-legal:
+    enabled: true
