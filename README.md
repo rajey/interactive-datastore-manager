@@ -1,3 +1,9 @@
+# Interactive DataStore Manager
+
+[![Build Status](https://travis-ci.org/rajey/interactive-datastore-manager.svg?branch=master)](https://travis-ci.org/rajey/interactive-datastore-manager)
+[![Maintainability](https://api.codeclimate.com/v1/badges/72a0a35d8369416a5fcc/maintainability)](https://codeclimate.com/github/rajey/interactive-datastore-manager/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/72a0a35d8369416a5fcc/test_coverage)](https://codeclimate.com/github/rajey/interactive-datastore-manager/test_coverage)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
