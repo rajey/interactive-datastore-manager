@@ -1,7 +1,7 @@
 import React from 'react';
 import { List } from '@material-ui/core';
-import NamespaceItem from '../Item/NamespaceItem';
-import EmptyList from '../../Common/EmptyList/EmptyList';
+import NamespaceItem from '../NamespaceItem/NamespaceItem';
+import EmptyList from '../EmptyList/EmptyList';
 
 const namespaceList = ({
   namespaces,
