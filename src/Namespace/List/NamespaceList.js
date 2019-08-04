@@ -3,7 +3,11 @@ import { List } from '@material-ui/core';
 import NamespaceItem from '../Item/NamespaceItem';
 import EmptyList from '../../Common/EmptyList/EmptyList';
 
-const namespaceList = ({ namespaces, onSetCurrentNamespace }) => {
+const namespaceList = ({
+  namespaces,
+  currentNamespaceId,
+  onSetCurrentNamespace
+}) => {
   return (
     <div>
       {!namespaces || namespaces.length === 0 ? (
@@ -13,6 +17,7 @@ const namespaceList = ({ namespaces, onSetCurrentNamespace }) => {
           {namespaces.map(namespace => (
             <NamespaceItem
               onSetCurrentNamespace={onSetCurrentNamespace}
+              currentNamespaceId={currentNamespaceId}
               key={namespace.id}
               namespace={namespace}
             />

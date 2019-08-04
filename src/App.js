@@ -45,13 +45,14 @@ class App extends React.Component {
           <div className="NamespaceList-header">
             <TextField placeholder="Search namespace" />
             <div>&nbsp;</div>
-            <Button variant="contained" color="primary">
+            <Button variant="outlined" size="small" color="primary">
               New
             </Button>
           </div>
           <div className="NamespaceList">
             <NamespaceList
               namespaces={this.state.namespaces}
+              currentNamespaceId={this.state.currentNamespaceId}
               onSetCurrentNamespace={this.setCurrentNamespace.bind(this)}
             />
           </div>
