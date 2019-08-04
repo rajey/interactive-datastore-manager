@@ -2,36 +2,32 @@ import './App.css';
 
 import React from 'react';
 
-import NamespaceList from './Namespace/List/NamespaceList';
-import CurrentNamespace from './Namespace/Current/CurrentNamespace';
+import NamespaceList from '../components/NamespaceList/NamespaceList';
+import CurrentNamespace from '../components/CurrentNamespace/CurrentNamespace';
 import { TextField, Button } from '@material-ui/core';
 
 class App extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      namespaces: [
-        {
-          id: 'dashboard',
-          name: 'Dashboard'
-        },
-        {
-          id: 'scorecard',
-          name: 'Scorecard'
-        },
-        {
-          id: 'function-maintenance',
-          name: 'Function Maintenance'
-        },
-        {
-          id: 'data-quality-dashboards',
-          name: 'Data Quality Dashboard'
-        }
-      ],
-      currentNamespaceId: ''
-    };
-  }
+  state = {
+    namespaces: [
+      {
+        id: 'dashboard',
+        name: 'Dashboard'
+      },
+      {
+        id: 'scorecard',
+        name: 'Scorecard'
+      },
+      {
+        id: 'function-maintenance',
+        name: 'Function Maintenance'
+      },
+      {
+        id: 'data-quality-dashboards',
+        name: 'Data Quality Dashboard'
+      }
+    ],
+    currentNamespaceId: ''
+  };
 
   setCurrentNamespace = namespaceId => {
     this.setState({
