@@ -32,6 +32,12 @@ class App extends React.Component {
       currentNamespaceId: ''
     };
   }
+
+  setCurrentNamespace = namespaceId => {
+    this.setState({
+      currentNamespaceId: namespaceId
+    });
+  };
   render() {
     return (
       <div className="Container">
@@ -44,7 +50,10 @@ class App extends React.Component {
             </Button>
           </div>
           <div className="NamespaceList">
-            <NamespaceList namespaces={this.state.namespaces} />
+            <NamespaceList
+              namespaces={this.state.namespaces}
+              onSetCurrentNamespace={this.setCurrentNamespace.bind(this)}
+            />
           </div>
         </div>
         <div className="CurrentNamespace">

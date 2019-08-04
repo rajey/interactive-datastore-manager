@@ -1,11 +1,16 @@
 import React from 'react';
 import { ListItem, ListItemText } from '@material-ui/core';
 
-const namespaceItem = ({ namespace }) => {
+const namespaceItem = ({ namespace, onSetCurrentNamespace }) => {
+  const setCurrentNamespace = e => {
+    e.stopPropagation();
+    onSetCurrentNamespace(namespace.id);
+  };
+
   return (
     <div>
       {namespace ? (
-        <ListItem button>
+        <ListItem button onClick={event => setCurrentNamespace(event)}>
           <ListItemText>{namespace.name}</ListItemText>
         </ListItem>
       ) : (
