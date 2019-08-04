@@ -1,0 +1,25 @@
+.Container {
+  position: relative;
+}
+
+.NamespaceList-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  border-right: solid thin #dddddd;
+}
+
+.NamespaceList {
+  margin-top: 5px;
+}
+
+.CurrentNamespace {
+  margin-left: 270px;
+  padding: 10px;
+}
+
+.NamespaceList-header {
+  display: flex;
+  padding: 10px;
+}

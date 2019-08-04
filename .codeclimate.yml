@@ -5,7 +5,9 @@ exclude_patterns:
   - 'dist'
   - '**/*.log'
   - '**/*.ico'
+  - '**/*.svg'
   - '**/*.test.js'
+  - 'serviceWorker.js'
 plugins:
   csslint:
     enabled: true
