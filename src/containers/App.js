@@ -5,6 +5,7 @@ import React from 'react';
 import NamespaceList from '../components/NamespaceList/NamespaceList';
 import CurrentNamespace from '../components/CurrentNamespace/CurrentNamespace';
 import { TextField, Button } from '@material-ui/core';
+import { find } from 'lodash';
 
 class App extends React.Component {
   state = {
@@ -26,14 +27,15 @@ class App extends React.Component {
         name: 'Data Quality Dashboard'
       }
     ],
-    currentNamespaceId: ''
+    currentNamespace: null
   };
 
   setCurrentNamespace = namespaceId => {
     this.setState({
-      currentNamespaceId: namespaceId
+      currentNamespace: find(this.state.namespaces, ['id', namespaceId])
     });
   };
+
   render() {
     return (
       <div className="Container">
@@ -48,13 +50,17 @@ class App extends React.Component {
           <div className="NamespaceList">
             <NamespaceList
               namespaces={this.state.namespaces}
-              currentNamespaceId={this.state.currentNamespaceId}
+              currentNamespaceId={
+                this.state.currentNamespace
+                  ? this.state.currentNamespace.id
+                  : ''
+              }
               onSetCurrentNamespace={this.setCurrentNamespace.bind(this)}
             />
           </div>
         </div>
         <div className="CurrentNamespace">
-          <CurrentNamespace />
+          <CurrentNamespace namespace={this.state.currentNamespace} />
         </div>
       </div>
     );

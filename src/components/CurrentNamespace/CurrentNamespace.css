@@ -1,0 +1,12 @@
+.CurrentNamespace-details {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 350px;
+  padding: 10px;
+  border-right: solid thin #dddddd;
+}
+
+.CurrentNamespace-editor {
+  margin-left: 380px;
+}
